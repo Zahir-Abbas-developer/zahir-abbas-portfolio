@@ -1,0 +1,318 @@
+@import "../../_globalColor";
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  width: 250px;
+}
+.card-title {
+  color: $titleColor;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0px 0 0 0;
+}
+.card-subtitle {
+  color: $cardSubtitle;
+  font-size: 17px;
+  line-height: 1.5rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $lightBackground2;
+  padding: 0 1.5rem 1rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid $lightBorder1;
+  justify-content: center;
+}
+.project-card-light {
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.project-card-dark {
+  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.25s ease;
+}
+
+.project-detail {
+  text-align: center;
+}
+.project-card-light:hover {
+  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+}
+.project-card-dark:hover {
+  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+}
+.project-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Maximum of 4 columns */
+  gap: 1rem; /* Uniform gap */
+  justify-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1400px) {
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+  }
+}
+
+@media (max-width: 1200px) {
+  .projects-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns for even smaller screens */
+  }
+}
+
+@media (max-width: 680px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* 1 column for mobile devices */
+  }
+}
+
+.project-card-footer span.project-tag {
+  background: $buttonColor;
+  color: $lightBackground3;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2em;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0 0.75em;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+@media (max-width: 768px) {
+  .project-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+:root {
+  --color-text: #616161;
+  --color-text-btn: #ffffff;
+  --card1-gradient-color1: #f12711;
+  --card1-gradient-color2: #f5af19;
+  --card2-gradient-color1: #7f00ff;
+  --card2-gradient-color2: #e100ff;
+  --card3-gradient-color1: #3f2b96;
+  --card3-gradient-color2: #a8c0ff;
+  --card4-gradient-color1: #11998e;
+  --card4-gradient-color2: #38ef7d;
+  --card5-gradient-color1: #ff9501;
+  --card5-gradient-color2: #7c7a7a;
+  --card6-gradient-color1: #f7430d;
+  --card6-gradient-color2: #7c7a7a;
+  --card7-gradient-color1: #eeff01;
+  --card7-gradient-color2: #7c7a7a;
+  --card8-gradient-color1: #ff0000;
+  --card8-gradient-color2: #7c7a7a;
+}
+
+.card-wrap {
+  // width: 320px;
+  background: #fff;
+  border-radius: 20px;
+  border: 5px solid #fff;
+  overflow: hidden;
+  color: var(--color-text);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.card-wrap:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 480px) {
+  .card-wrap:hover {
+    transform: scale(1);
+  }
+  .card-wrap {
+    margin-top: 1rem;
+  }
+}
+.card-header {
+  height: 200px;
+  width: 100%;
+  background: red;
+  border-radius: 100% 0% 100% 0% / 0% 50% 50% 100%;
+  display: grid;
+  place-items: center;
+}
+
+.card-header i {
+  color: #fff;
+  font-size: 72px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.card-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.card-text {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 3.2rem;
+}
+.card-btn {
+  border: none;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 0;
+  padding: 5px 30px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.card-header.one {
+  background: linear-gradient(
+    to bottom left,
+    var(--card1-gradient-color1),
+    var(--card1-gradient-color2)
+  );
+}
+.card-header.two {
+  background: rgb(202, 160, 230);
+  background: linear-gradient(
+    90deg,
+    rgba(202, 160, 230, 1) 0%,
+    rgba(203, 203, 203, 1) 100%
+  );
+}
+.card-header.three {
+  background: rgb(107, 154, 154);
+  background: linear-gradient(
+    0deg,
+    rgba(107, 154, 154, 1) 0%,
+    rgba(253, 187, 45, 1) 44%
+  );
+}
+.card-header.four {
+  background: linear-gradient(
+    to bottom left,
+    var(--card4-gradient-color1),
+    var(--card4-gradient-color2)
+  );
+}
+.card-header.five {
+  background: linear-gradient(
+    to bottom left,
+    var(--card5-gradient-color1),
+    var(--card5-gradient-color2)
+  );
+}
+.card-header.six {
+  background: linear-gradient(
+    to bottom left,
+    var(--card6-gradient-color1),
+    var(--card6-gradient-color2)
+  );
+}
+.card-header.seven {
+  background: linear-gradient(
+    to bottom left,
+    var(--card7-gradient-color1),
+    var(--card7-gradient-color2)
+  );
+}
+.card-header.eight {
+  background: linear-gradient(
+    to bottom left,
+    var(--card8-gradient-color1),
+    var(--card8-gradient-color2)
+  );
+}
+
+.card-btn.one {
+  background: linear-gradient(
+    to left,
+    var(--card1-gradient-color1),
+    var(--card1-gradient-color2)
+  );
+}
+.card-btn.two {
+  background: linear-gradient(
+    to left,
+    var(--card2-gradient-color1),
+    var(--card2-gradient-color2)
+  );
+}
+.card-btn.three {
+  background: linear-gradient(
+    to left,
+    var(--card3-gradient-color1),
+    var(--card3-gradient-color2)
+  );
+}
+.card-btn.four {
+  background: linear-gradient(
+    to left,
+    var(--card4-gradient-color1),
+    var(--card4-gradient-color2)
+  );
+}
+.card-btn.five {
+  background: linear-gradient(
+    to left,
+    var(--card5-gradient-color1),
+    var(--card5-gradient-color2)
+  );
+}
+.card-btn.six {
+  background: linear-gradient(
+    to left,
+    var(--card6-gradient-color1),
+    var(--card6-gradient-color2)
+  );
+}
+.card-btn.seven {
+  background: linear-gradient(
+    to left,
+    var(--card7-gradient-color1),
+    var(--card7-gradient-color2)
+  );
+}
+.card-btn.eight {
+  background: linear-gradient(
+    to left,
+    var(--card8-gradient-color1),
+    var(--card8-gradient-color2)
+  );
+}
